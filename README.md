@@ -20,7 +20,6 @@ Segmentation fault (core dumped)
 
 ```shell
 $ stack run
-lehins@lehins-HP:~/github/ghc-segfault$ stack run
 segfault-0.1.0.0: unregistering (local file changes: app/Main.hs package.yaml segfault.cabal src/Complex.hs src/Sample.hs)
 Building all executables for `segfault' once. After a successful build of all of them, only specified executables will be rebuilt.
 segfault> configure (lib + exe)
