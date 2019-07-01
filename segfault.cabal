@@ -1,0 +1,44 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c881bac988af2976878ac167b0df4456e5065aeca71af6b4379e79bc7770cc17
+
+name:           segfault
+version:        0.1.0.0
+description:    A way to trigger a ghc bug, where compiled code results in a segfault
+homepage:       https://github.com/lehins/ghc-segfault
+author:         Alexey Kuleshevich
+maintainer:     Alexey Kuleshevich
+copyright:      2019 FP Complete
+license:        BSD3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Complex
+      Sample
+  other-modules:
+      Paths_segfault
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.11 && <10
+    , bytestring
+  default-language: Haskell2010
+
+executable gini-node
+  main-is: Main.hs
+  other-modules:
+      Paths_segfault
+  hs-source-dirs:
+      app
+  ghc-options: -Wall
+  build-depends:
+      base >=4.11 && <10
+    , bytestring
+    , segfault
+  default-language: Haskell2010

@@ -1,0 +1,27 @@
+name:                segfault
+version:             0.1.0.0
+license:             BSD3
+author:              Alexey Kuleshevich
+copyright:           2019 FP Complete
+homepage:            https://github.com/lehins/ghc-segfault
+
+
+description:         A way to trigger a ghc bug, where compiled code results in a segfault
+
+dependencies:
+- base >= 4.11 && < 10
+- bytestring
+
+ghc-options:
+- -Wall
+
+library:
+  source-dirs: src
+
+
+executables:
+  gini-node:
+    main:                Main.hs
+    source-dirs:         app
+    dependencies:
+    - segfault
